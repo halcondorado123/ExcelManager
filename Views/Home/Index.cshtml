@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Exportar a Excel - Version 2.0";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Exportar Datos a Excel</h2>
+    @using (Html.BeginForm("Exportar", "Home", FormMethod.Post))
+    {
+        <input type="submit" value="Exportar a Excel" />
+    }
+
+    <h2>Generar Campo para nueva materia</h2>
+    @using (Html.BeginForm("AgregarFilaEnPosicion", "Home", FormMethod.Post))
+    {
+        <asp:Button ID="btnDescargar" runat="server" Text="Descargar Excel" OnClick="btnDescargar_Click" />
+    }
+
+    <script>
+        $(document).ready(function () {
+            // Agregar un evento de clic al botón
+            $("#generarFila").click(function () {
+                // Mostrar un alert cuando se hace clic en el botón
+                alert("Has creado una nueva fila!");
+            });
+        });
+    </script>
+
+</body>
+</html>
