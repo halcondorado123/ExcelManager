@@ -292,7 +292,7 @@ namespace PruebaExcel01.Controllers
         #region ImagesDocument
         private void AddLogo(ExcelWorksheet worksheet)
         {
-            string imagePathLogo = "C:\\Users\\Jhonattan_Casallas\\Desktop\\EnsayoExcelTecnologo\\PruebaExcel_Version02\\Img_sample\\log1.png";
+            string imagePathLogo = "C:\\Users\\Jhonattan_Casallas\\Desktop\\EnsayoExcel\\ExcelManager\\Img_sample\\log1.png";
             //string imagePathLogo = "C:\\Users\\Usuario\\Desktop\\PruebaExcel01\\Img_sample\\log1.png";
             int widthLogoInPixels = 300;
             int heightLogoInPixels = 110;
@@ -313,7 +313,7 @@ namespace PruebaExcel01.Controllers
 
         private void ProgramManagerSignature(ExcelWorksheet worksheet, int row, int column)
         {
-            string imagePathSignature = "C:\\Users\\Jhonattan_Casallas\\Desktop\\EnsayoExcelTecnologo\\PruebaExcel_Version02\\Img_sample\\lennon_signature.jpg";
+            string imagePathSignature = "C:\\Users\\Jhonattan_Casallas\\Desktop\\EnsayoExcel\\ExcelManager\\Img_sample\\lennon_signature.jpg";
             int widthSignatureInPixels = 230;
             int heightSignatureInPixels = 70;
 
@@ -329,21 +329,21 @@ namespace PruebaExcel01.Controllers
             pictureSignature.Locked = true;
         }
 
-        //private void StudentSignature(ExcelWorksheet worksheet)
-        //{
-        //    // Valor quemado, por evaluar la opcion de firma generada por parte del estudiante
-        //    string imagePathSignature = "C:\\Users\\Jhonattan_Casallas\\Desktop\\EnsayoExcelTecnologo\\PruebaExcel_Version02\\Img_sample\\2560px-Freddie_Mercury_signature.svg.png";
-        //    //string imagePathSignature = "C:\\Users\\Usuario\\Desktop\\PruebaExcel01\\Img_sample\\2560px-Freddie_Mercury_signature.svg.png";
-        //    int widthSignatureInPixels = 230;
-        //    int heightSignatureInPixels = 70;
+        private void StudentSignature(ExcelWorksheet worksheet)
+        {
+            // Valor quemado, por evaluar la opcion de firma generada por parte del estudiante
+            string imagePathSignature = "C:\\Users\\Jhonattan_Casallas\\Desktop\\EnsayoExcel\\ExcelManager\\Img_sample\\2560px-Freddie_Mercury_signature.svg.png";
+            //string imagePathSignature = "C:\\Users\\Usuario\\Desktop\\PruebaExcel01\\Img_sample\\2560px-Freddie_Mercury_signature.svg.png";
+            int widthSignatureInPixels = 230;
+            int heightSignatureInPixels = 70;
 
-        //    var pictureSignature = worksheet.Drawings.AddPicture("FirmaStu", new FileInfo(imagePathSignature));
+            var pictureSignature = worksheet.Drawings.AddPicture("FirmaStu", new FileInfo(imagePathSignature));
 
-        //    pictureSignature.SetPosition(73, -80, 8, -30);
-        //    pictureSignature.SetSize(widthSignatureInPixels, heightSignatureInPixels);
-        //    pictureSignature.Locked = true;
+            pictureSignature.SetPosition(73, -80, 8, -30);
+            pictureSignature.SetSize(widthSignatureInPixels, heightSignatureInPixels);
+            pictureSignature.Locked = true;
 
-        //}
+        }
 
         #endregion
 
